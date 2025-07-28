@@ -10,7 +10,7 @@ export function WeatherProvider({ children }) {
   async function fetchWeather(city) {
     try {
       const response = await fetch(
-        `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${KEY}&units=imperial`
+        `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${KEY}&units=imperial`
       );
       const data = await response.json();
       setWeatherData(data);
